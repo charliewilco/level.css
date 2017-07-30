@@ -1,6 +1,6 @@
 {
   "name": "level.css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a level playing field for browser styling",
   "main": "index.css",
   "browser": "level.css",
