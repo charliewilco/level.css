@@ -38,9 +38,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "postcss-cli": "^4.1.0",
-    "postcss-custom-properties": "^6.1.0"
-  },
-  "dependencies": {
+    "postcss-custom-properties": "^6.1.0",
     "wilco": "^0.2.0"
   }
 }
