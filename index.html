@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class='u-anti'>
+  <head>
+    <meta charset="utf-8">
+    <title>Level.css</title>
+    <link rel="stylesheet" href="https://unpkg.com/level.css@0.1.1/level.css" />
+    <link rel="stylesheet" href="https://unpkg.com/ff.css@0.2.0/dist/ff.css" />
+    <link rel="stylesheet" href="https://unpkg.com/pluton.css@1.1.1/settings.css" />
+    <link rel="stylesheet" href="https://unpkg.com/pluton.css@1.1.1/utilities.css" />
+    <style>
+      body {
+        background-color: var(--blue-dark);
+        color: var(--blue-light);
+      }
+
+      article {
+        margin: 2rem;
+        padding: .5rem;
+        max-width: 38rem;
+      }
+
+      h4 {
+        margin-bottom: .75rem;
+      }
+
+      p,
+      ol {
+        margin-bottom: 1.125rem;
+        line-height: 1.7
+      }
+
+      pre {
+        padding: .5rem;
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <article class='u-avenir'>
+      <header>
+        <h1 class='u-w400'>Level.css</h1>
+      </header>
+      <section class='u-charter'>
+        <p>Level.css is a simple CSS reset/normalize.</p>
+        <p>I am never really sure how aggressive of a reset css or a normalize I ever want in a project or how opinionated that level of hierarchy should be.</p>
+        <p>Things I typically want from a reset.css:</p>
+        <ol>
+          <li>Box model reset to <code class='u-sfmono'>border-box</code></li>
+          <li>No default margins</li>
+          <li>Responsive images and media</li>
+          <li>Forms to be semi-consist and to inherit typography related styles</li>
+          <li>Code blocks to have a realistic <code class='u-sfmono'>font-size</code></li>
+        </ol>
+        <h4 class='u-w400 u-avenir'>Installation</h4>
+        <pre class='u-bg--offwhite u-blue'><code class='u-sfmono'>yarn add level.css</code></pre>
+        <pre class='u-bg--offwhite u-blue'><code class='u-sfmono'>npm i -S level.css</code></pre>
+      </section>
+    </article>
+  </body>
+</html>
