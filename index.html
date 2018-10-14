@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html class='u-anti u-w400 u-bg--blue u-offwhite'>
 
-<head>
-  <meta charset="utf-8">
-  <title>Level.css</title>
-  <link rel="stylesheet" href="https://unpkg.com/level.css" />
-  <link rel="stylesheet" href="https://unpkg.com/obsidian.css" />
-  <link rel="stylesheet" href="https://unpkg.com/ff.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#147AAB" />
-  <meta name="author" content="Charles Peters" />
-  <style>
+  <head>
+    <meta charset="utf-8">
+    <title>Level.css</title>
+    <link rel="stylesheet" href="https://unpkg.com/level.css" />
+    <link rel="stylesheet" href="https://unpkg.com/obsidian.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#147AAB" />
+    <meta name="author" content="Charles Peters" />
+    <style>
     p,
     ol {
       margin-bottom: 1.125rem;
       line-height: 1.7
     }
+
+    xmp { font-family: inherit; }
 
     ol {
       list-style-position: outside;
@@ -25,57 +26,58 @@
       padding: .5rem;
       margin-bottom: 1.5rem;
     }
-  </style>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36412149-6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36412149-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-    gtag('config', 'UA-36412149-6');
-  </script>
-</head>
+      gtag('config', 'UA-36412149-6');
+    </script>
+  </head>
 
-<body class="u-p3 u-mono">
-  <article class='o-Container o-Container--center o-Container--sm u-w400'>
-    <header class="u-my5">
-      <h1 class='h3 u-w700'>Level.css</h1>
-    </header>
-    <section class="u-mb6">
-      <p>Level.css is a simple CSS reset/normalize.</p>
-      <p>I am never really sure how aggressive of a reset css or a normalize I ever want in a project or how opinionated that
-        level of hierarchy should be.</p>
-      <p>Things I typically want from a reset.css:</p>
-      <ol>
-        <li>Box model reset to
-          <code class='u-sfmono'>border-box</code>
-        </li>
-        <li>No default margins</li>
-        <li>Responsive images and media</li>
-        <li>Forms to be semi-consist and to inherit typography related styles</li>
-        <li>Code blocks to have a realistic
-          <code class='u-sfmono'>font-size</code>
-        </li>
-      </ol>
-      <section class='u-mb6'>
-        <h3 class='h5 u-w400 u-mb5'>Installation</h3>
-        <pre class='u-bg--offwhite u-blue'><code class='small u-sfmono u-bl'>yarn add level.css</code></pre>
-        <pre class='u-bg--offwhite u-blue'><xmp class='small u-sfmono u-bl'><link rel="stylesheet" href="https://unpkg.com/level.css" /></xmp></pre>
-      </section>
-      <section class="u-mb6 u-center">
-        <nav>
-          <ul class='o-UIList o-UIList--dividers'>
-            <li class='o-UIList__item'>
-              <a class="u-yellow" href="https://github.com/charliewilco/level.css">GitHub</a>
-            </li>
-            <li class='o-UIList__item'>
-              <a class="u-yellow" href="https://obsidian.charlespeters.net/">Obsidian.css</a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-  </article>
-</body>
+  <body class="u-p3">
+    <article class='o-Container o-Container--center o-Container--sm u-w400'>
+      <header class="u-my5">
+        <h1 class='h3 u-w300'>Level.css</h1>
+      </header>
+      <section class="u-mb6">
+        <p>Level.css is a simple CSS reset/normalize.</p>
+        <p>I am never really sure how aggressive of a reset css or a normalize I ever want in a project or how opinionated that
+          level of hierarchy should be.</p>
+        <p>Things I typically want from a reset.css:</p>
+        <ol>
+          <li>Box model reset to
+            <code class='u-sfmono'>border-box</code>
+          </li>
+          <li>No default margins</li>
+          <li>Responsive images and media</li>
+          <li>Forms to be semi-consist and to inherit typography related styles</li>
+          <li>Code blocks to have a realistic
+            <code class='u-sfmono'>font-size</code>
+          </li>
+        </ol>
+        <section class='u-mb6'>
+          <h2 class='h5 u-w400 u-mb5'>Installation</h2>
+          <pre class='u-bg--offwhite u-blue'><code class='small u-sfmono u-bl'>yarn add level.css</code></pre>
+          <pre class='u-bg--offwhite u-blue'><xmp class='small u-sfmono u-bl'><link rel="stylesheet" href="https://unpkg.com/level.css" /></xmp></pre>
+        </section>
+        <section class="u-mb6">
+          <h2 class='h5 u-w400 u-mb5'>Links</h2>
+          <nav>
+            <ul class='o-UIList o-UIList--inline'>
+              <li class='o-UIList__item'>
+                <a class="u-yellow" href="https://github.com/charliewilco/level.css">GitHub</a>
+              </li>
+              <li class='o-UIList__item'>
+                <a class="u-yellow" href="https://obsidian.charlespeters.net/">Obsidian.css</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+    </article>
+  </body>
 
 </html>
