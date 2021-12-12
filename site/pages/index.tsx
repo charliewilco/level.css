@@ -1,5 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from "next/head";
+import Link from "next/link";
+import { AutoGrid } from "@charliewilco/level-ui";
 
 const IndexPage = () => (
   <div>
@@ -9,11 +10,24 @@ const IndexPage = () => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
+
+    <AutoGrid columns={3}>
+      <p>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </p>
+      <p>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </p>
+      <p>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </p>
+    </AutoGrid>
   </div>
 );
 
