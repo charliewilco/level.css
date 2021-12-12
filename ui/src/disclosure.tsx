@@ -5,11 +5,9 @@ import React, {
   useContext,
   useMemo,
   useReducer,
-  useRef,
+  useRef
 } from "react";
 import { isFunction } from "./utils/assertions";
-
-console.log(React);
 
 interface IDisclosureContext {
   disclosureId: string;
@@ -22,7 +20,7 @@ export const DisclosureContext = createContext<IDisclosureContext>({
   disclosureId: "..",
   open: false,
   panelId: "..",
-  onSelect() {},
+  onSelect() {}
 });
 
 type DisclosureAction = (prev: boolean) => boolean | boolean;
@@ -46,7 +44,7 @@ export const Root = forwardRef(({ children }) => {
       disclosureId: "!",
       open: isOpen,
       onSelect: handleSelect,
-      panelId: "!",
+      panelId: "!"
     };
   }, []);
 
@@ -66,26 +64,24 @@ export const Panel = forwardRef(({ children }) => {
   );
 });
 
-export const Button = forwardRef<HTMLButtonElement>(
-  ({ children, ...props }, ref) => {
-    const { onSelect, open, panelId } = useContext(DisclosureContext);
-    const ownRef = useRef<HTMLElement | null>(null);
+export const Button = forwardRef<HTMLButtonElement>(({ children }, ref) => {
+  const { onSelect, open, panelId } = useContext(DisclosureContext);
+  const ownRef = useRef<HTMLElement | null>(null);
 
-    function handleClick(event: React.MouseEvent) {
-      event.preventDefault();
-      // ownRef.current && ownRef.current.focus();
-      onSelect();
-    }
-
-    return (
-      <button
-        aria-controls={panelId}
-        aria-expanded={open}
-        ref={ref}
-        onClick={handleClick}
-      >
-        {children}
-      </button>
-    );
+  function handleClick(event: React.MouseEvent) {
+    event.preventDefault();
+    ownRef.current && ownRef.current.focus();
+    onSelect();
   }
-);
+
+  return (
+    <button
+      aria-controls={panelId}
+      aria-expanded={open}
+      ref={ref}
+      onClick={handleClick}
+    >
+      {children}
+    </button>
+  );
+});

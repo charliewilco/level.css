@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Portal } from "./portal";
 
 interface INotifcationProps {
@@ -6,7 +7,7 @@ interface INotifcationProps {
 }
 
 export const ToastNotifications: React.VFC<INotifcationProps> = ({
-  notifications,
+  notifications
 }) => {
   return (
     <Portal type="div">

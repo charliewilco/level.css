@@ -1,3 +1,5 @@
+import * as React from "react";
+
 interface IAutoGrid {
   columns: number;
   smColumns?: number;
@@ -10,7 +12,7 @@ export const AutoGrid: React.FC<IAutoGrid> = ({
   children,
   smColumns,
   mdColumns,
-  lgColumns,
+  lgColumns
 }) => {
   return (
     <div className="grid">

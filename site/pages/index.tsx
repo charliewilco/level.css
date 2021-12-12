@@ -1,9 +1,5 @@
-import Head from "next/head";
-import Link from "next/link";
-import React from "react";
-import ReactDOM from "react-dom";
-
-console.log(React, ReactDOM);
+import Head from 'next/head';
+import Link from 'next/link';
 
 const IndexPage = () => (
   <div>

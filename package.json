@@ -6,9 +6,42 @@
     "ui"
   ],
   "scripts": {
-    "start": "yarn workspace @charliewilco/level-site start",
-    "build": "yarn workspaces run build",
-    "dev": "yarn workspace @charliewilco/level-site dev",
-    "watch": "yarn workspace @charliewilco/level-ui build -w"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write '**/*.{ts,tsx,.md}'"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "none"
+  },
+  "turbo": {
+    "pipeline": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "dist/**",
+          ".next/**"
+        ]
+      },
+      "test": {
+        "outputs": []
+      },
+      "lint": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
+    }
   }
 }

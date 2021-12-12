@@ -1,10 +1,4 @@
-import {
-  useLayoutEffect,
-  useEffect,
-  useRef,
-  useState,
-  useCallback,
-} from "react";
+import React, { useRef } from "react";
 import { createPortal } from "react-dom";
 import { useForceUpdate } from "./useForceUpdate";
 import { useIsomorphicLayoutEffect } from "./useIsomorphicEffect";
@@ -17,7 +11,7 @@ interface IPortalProps {
 export const Portal: React.FC<IPortalProps> = ({
   type,
   children,
-  containerRef,
+  containerRef
 }) => {
   let mountNode = useRef<HTMLDivElement | null>(null);
   let portalNode = useRef<HTMLElement | null>(null);
