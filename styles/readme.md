@@ -15,7 +15,3 @@ Things I typically want from a reset.css:
 ```shell
 yarn add level.css
 ```
-
-```shell
-npm i -S level.css
-```

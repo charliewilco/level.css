@@ -1,0 +1,60 @@
+{
+  "name": "@charliewilco/level",
+  "version": "0.1.1",
+  "description": "a level playing field for browser styling",
+  "main": "index.css",
+  "browser": "level.css",
+  "scripts": {
+    "build": "postcss index.css -o level.css && npm run lint",
+    "prepublish": "npm run build",
+    "lint": "stylelint index.css"
+  },
+  "repository": "charliewilco/level.css",
+  "keywords": [
+    "normalize",
+    "reset",
+    "css"
+  ],
+  "author": "charlie <charlespeters42@gmail.com> (https://charliewil.co)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charlespeters/level.css/issues"
+  },
+  "homepage": "https://github.com/charlespeters/level.css#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.1",
+    "stylelint": "^14.0.1",
+    "stylelint-config-standard": "^23.0.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "postcss": {
+    "map": false,
+    "plugins": {
+      "autoprefixer": {
+        "remove": true
+      }
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "declaration-colon-newline-after": null,
+      "value-list-comma-newline-after": null,
+      "value-keyword-case": [
+        "lower",
+        {
+          "ignoreProperties": [
+            "font",
+            "font-family",
+            "--monospace",
+            "--sans-serif"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,44 +1,47 @@
 {
-  "name": "level.css",
-  "version": "0.1.1",
-  "description": "a level playing field for browser styling",
-  "main": "index.css",
-  "browser": "level.css",
-  "scripts": {
-    "build": "postcss index.css -o level.css && npm run lint",
-    "prepublish": "npm run build",
-    "lint": "wilco index.css"
-  },
-  "browserslist": [
-    "last 2 versions"
+  "private": true,
+  "workspaces": [
+    "site",
+    "styles",
+    "ui"
   ],
-  "postcss": {
-    "map": false,
-    "plugins": {
-      "autoprefixer": {
-        "remove": true
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write '**/*.{ts,tsx,.md}'"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "none"
+  },
+  "turbo": {
+    "pipeline": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "dist/**",
+          ".next/**"
+        ]
       },
-      "postcss-custom-properties": {
-        "preserve": true
+      "test": {
+        "outputs": []
+      },
+      "lint": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
       }
     }
-  },
-  "repository": "charlespeters/level.css",
-  "keywords": [
-    "normalize",
-    "reset",
-    "css"
-  ],
-  "author": "charles peters <charlespeters42@gmail.com> (https://charlespeters.net)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/charlespeters/level.css/issues"
-  },
-  "homepage": "https://github.com/charlespeters/level.css#readme",
-  "devDependencies": {
-    "autoprefixer": "^7.1.2",
-    "postcss-cli": "^4.1.0",
-    "postcss-custom-properties": "^6.1.0",
-    "wilco": "^0.2.0"
   }
 }
